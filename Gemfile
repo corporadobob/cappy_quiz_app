@@ -10,6 +10,10 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-stack_explorer'
 end
 
 group :assets do

@@ -23,57 +23,57 @@ describe "The Home Page" do
     expect(page).to have_content("hello and welcome")
   end
 
-  # it "has the title 'Week 10'" do
-  #   expect(page).to have_title "Week 10"
-  # end
+  it "has the title 'Week 10'" do
+    expect(page).to have_title "Week 10"
+  end
 
-  # it "has a link to /javascript" do
-  #   find_link('JavaScript').click
-  #   expect(page).to have_content('Java Jive')
-  #   expect(current_path).to eq('/javascript')
-  # end
+  it "has a link to /javascript" do
+    find_link('JavaScript').click
+    expect(page).to have_content('Java Jive')
+    expect(current_path).to eq('/javascript')
+  end
 
 end
 
 describe 'A page called JavaScript' do
 
-  # before(:each) do
-  #   visit '/javascript'
-  # end
+  before(:each) do
+    visit '/javascript'
+  end
 
-  # it "Has an h1 with the text 'Java Jive'" do
-  #   h1 = page.find('h1')
-  #   text = 'Java Jive'
-  #   expect(h1.has_content?(text)).to be true
-  # end
+  it "Has an h1 with the text 'Java Jive'" do
+    h1 = page.find('h1')
+    text = 'Java Jive'
+    expect(h1.has_content?(text)).to be true
+  end
 
-  # it "has a button labeled 'Click Me!'" do
-  #   button = page.find('button')
-  #   label = 'Click Me!'
-  #   expect(button.has_content?(label)).to be true
-  # end
+  it "has a button labeled 'Click Me!'" do
+    button = page.find('button')
+    label = 'Click Me!'
+    expect(button.has_content?(label)).to be true
+  end
 
-  # describe "clicking the button with JavaScript enabled", :js => true do
+  describe "clicking the button with JavaScript enabled", :js => true do
 
-  #   before(:each) do
-  #     click_button('Click Me!');
-  #   end
+    before(:each) do
+      click_button('Click Me!');
+    end
 
-  #   it "changes the h1's text to Jabba Jive using jQuery" do
-  #     expect(page).to have_content('Jabba Jive')
-  #     expect(page).to have_no_content('Java Jive')
-  #   end
+    it "changes the h1's text to Jabba Jive using jQuery" do
+      expect(page).to have_content('Jabba Jive')
+      expect(page).to have_no_content('Java Jive')
+    end
 
-  #   it "changes the body's background to pink", :js => true do
-  #     expect(page).to have_css('body.pink')
-  #   end
+    it "changes the body's background to pink", :js => true do
+      expect(page).to have_css('body.pink')
+    end
 
-  #   it "disables the button", :js => true do
-  #     button = page.find('button')
-  #     expect(button.disabled?).to be true
-  #   end
+    it "disables the button", :js => true do
+      button = page.find('button')
+      expect(button.disabled?).to be true
+    end
 
-  # end
+  end
 
 end
 
